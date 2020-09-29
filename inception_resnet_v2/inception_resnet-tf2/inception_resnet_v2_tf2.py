@@ -6,12 +6,12 @@
 """
 The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the gride size. 
 Please note the filters in the joint convoluation for A B and C blocks are respectively 384, 1154 and 
-2048. It is a variant without an auxiliary classifier. Please run the 
+2048. It is a variant without an auxiliary classifier. 
 
-$ python inception_resnet_v2_tf2.py
+The defualted weights(by Cholett) are not suitable to the deeper model becuase it adds the auxilary 
+classifier. So users need to generate the weights. Please run the script with the command as follows.
 
-If users want to run the model, please run the script of Inceptin_v4_func.py. Since it is abstract, 
-we do not set the argument of the weights that need to be downloaded from designated weblink. 
+$ python inception_resnet_v2_tf2.py 
 
 Make the the necessary changes to adapt to the environment of TensorFlow 2.3, Keras 2.4.3, CUDA Toolkit 
 11.0, cuDNN 8.0.1 and CUDA 450.57. In addition, write the new lines of code to replace the deprecated 
