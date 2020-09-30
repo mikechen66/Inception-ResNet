@@ -7,9 +7,9 @@ the official Inception ResNet paper. And the second model is based on keras' pub
 "inception_resnet_v2" and the slim model by TensorFlow. 
 
 The official slim model is hard to be understood due to redundant lines of code and lack of 
-clarity. Furthermore, the model in Keas library also inlcude puzzling code. And the last is 
-that some of exlicit oode error is obvious. Therfore, I greatly changes the lines of code to 
-reflect the simplicity and correctedness. 
+clarity. Furthermore, the model in Keas library also inlcudes puzzling code(with the 5x5 filter
+in the inception_a). And the last is that the exlicit bug is obvious. Therefore, I greatly 
+changes the lines of code to reflect the simplicity and correctedness. 
 
 It is worth noting that the orginal keras and slim models have a different stem. Taht is quite 
 different from the published paper, Inception-v4, Inception-ResNet and the Impact of Residual 
