@@ -6,19 +6,21 @@
 """
 The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the gride size. 
 Please note the filters in the joint convoluation for A B and C blocks are respectively 384, 1154 and 
-2048. It is a variant without an auxiliary classifier. 
+2048. It is a variant without an auxiliary classifier. Please run the following command. 
 
-The defualted weights(by Cholett) are not suitable to the deeper model becuase it adds the auxilary 
-classifier. So users need to generate the weights. Please run the script with the command as follows.
+$ python inception_resnet_v2_tf2.py
 
-$ python inception_resnet_v2_tf2.py 
+The total size of parameters of the current model is 40+ million due to adopting the lightweight lambda 
+function that only addresses a multiplying computation. And then it execute the typical concatenation 
+operation. In contrast, the total size of the official slim and Keras model increase 45% due to the 
+operation between the input and residual(the operand of the muliplication). 
+
+if scale: i = Lambda(lambda z: z*0.20)(i)
 
 Make the the necessary changes to adapt to the environment of TensorFlow 2.3, Keras 2.4.3, CUDA Toolkit 
 11.0, cuDNN 8.0.1 and CUDA 450.57. In addition, write the new lines of code to replace the deprecated 
 code.  
 
-Please note that the input image format for this model is different than for the VGG16 and ResNet models 
-(299x299 instead of 224x224), and that the input preprocessing function is also different. 
 
 Environment: 
 Ubuntu 18.04 
