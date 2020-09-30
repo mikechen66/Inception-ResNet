@@ -17,6 +17,6 @@ Connections on Learning. Furthermore, the lambda function in the above two model
 total size of parameters up 37.5%. It is incurred by the lambda function that generats a serious
 side effect. 
 
-The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the gride 
-size. Please note the filters in the joint convoluation for A B and C blocks are respectively 384,
-1154 and 2048. However, the realistic scenario is a little different. 
+The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the grid 
+size. Please note the filters in the joint convoluation for A, B and C blocks are respectively 
+384, 1154 and 2048. However, the realistic scenario is a little different. 
