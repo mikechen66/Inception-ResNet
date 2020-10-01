@@ -83,7 +83,7 @@ def conv2d_bn(x, filters, kernel_size, strides=1, padding='same', activation='re
         bn_axis = 3 if K.image_data_format() == 'channels_last' else 1
         bn_name = None if name is None else name + '_bn'
         x = BatchNormalization(axis=bn_axis, scale=False, name=bn_name)(x)
-    if activation # -is not None:
+    if activation:
         ac_name = None if name is None else name + '_ac'
         x = Activation(activation, name=ac_name)(x)
 
