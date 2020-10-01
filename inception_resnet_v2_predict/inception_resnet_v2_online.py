@@ -6,9 +6,9 @@
 """
 Inception-ResNet V2 model for Keras
 
-The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the gride size. 
-Please note the filters in the joint convoluation for A B and C blocks are respectively 384, 1154 and 
-2048. However, the realistic scenario is a little different. Please run the commands as follows. 
+The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respectively in the grid size. 
+Please note the filters in the joint convoluation for A, B and C blocks are respectively 384, 1154 
+and 2048. However, the realistic scenario is a little different. Please run the command as follows. 
 
 $ python inception_resnet_v2_online.py
 
