@@ -21,9 +21,9 @@ input and the residual with computing the operand of the muliplication and then 
                  arguments={'scale': scale}, 
                  name=block_name)([input, mix])
 
-In contrast, the lightweight lambda(inception_resnet_v2_tf2)addresses the multiplying computation, and
-then it execute the typical concatenation operation. So the lightweight model decreases 35%~45% of the 
-total size of total parameters.  
+In contrast, the light weight lambda(inception_resnet_v2_tf2)addresses the multiplying computation, and
+then executes the typical concatenation operation. So the lightweight model decreases 35%~45% of the 
+total size of total parameters of the official keras and slim models. 
 
 Make the the necessary changes to adapt to the environment of TensorFlow 2.3, Keras 2.4.3, CUDA Toolkit 
 11.0, cuDNN 8.0.1 and CUDA 450.57. In addition, write the new lines of code to replace the deprecated 
