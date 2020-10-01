@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# inception_resnet_v2_pred.py
+# inception_resnet_v2_online.py
 
 """
 Inception-ResNet V2 model for Keras
@@ -10,7 +10,7 @@ The Inception-Resnet A, B and C blocks are 35 x 35, 17 x 17 and 8 x 8 respective
 Please note the filters in the joint convoluation for A B and C blocks are respectively 384, 1154 and 
 2048. However, the realistic scenario is a little different. Please run the commands as follows. 
 
-$ python inception_resnet_v2_pred.py
+$ python inception_resnet_v2_online.py
 
 The total size of parameters of the current model is 55+ million(similar to the official Slim model) 
 due to adopting the heavy weight lambda function that addresses the composite operation between the 
