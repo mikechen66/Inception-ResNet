@@ -13,7 +13,7 @@ Please note the filters in the joint convoluation for A B and C blocks are respe
 $ python inception_resnet_v2_pred.py
 
 The total size of parameters of the current model is 55+ million(similar to the official Slim model) 
-due to adopting the heavyweight lambda function that addresses the composite operation between the 
+due to adopting the heavy weight lambda function that addresses the composite operation between the 
 input and the residual with computing the operand of the muliplication and then execuing addition. 
 
     mix = Lambda(lambda inputs, scale: inputs[0]+inputs[1]*scale, 
@@ -22,8 +22,8 @@ input and the residual with computing the operand of the muliplication and then 
                  name=block_name)([input, mix])
 
 In contrast, the lightweight lambda(inception_resnet_v2_tf2)addresses the multiplying computation, and
-then it execute the typical concatenation operation. So the lightweight model decreases 45% of the total 
-size of total parameters.  
+then it execute the typical concatenation operation. So the lightweight model decreases 35%~45% of the 
+total size of total parameters.  
 
 Make the the necessary changes to adapt to the environment of TensorFlow 2.3, Keras 2.4.3, CUDA Toolkit 
 11.0, cuDNN 8.0.1 and CUDA 450.57. In addition, write the new lines of code to replace the deprecated 
@@ -37,9 +37,6 @@ Keras 2.4.3
 CUDA Toolkit 11.0, 
 cuDNN 8.0.1
 CUDA 450.57.
-
-Inception-v4, Inception-ResNet and the Impact of Residual Connections on Learning
-https://arxiv.org/pdf/1602.07261.pdf 
 
 Pre-trained ImageNet weights are also converted from TF-slim, which can be found in:
 https://github.com/tensorflow/models/tree/master/slim#pre-trained-models
